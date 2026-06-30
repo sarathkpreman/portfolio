@@ -1,26 +1,34 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
+
 @theme {
-  --color-background: #0f1418;
-  --color-foreground: #f0f2f5;
+  --color-background: #f2f0eb;
+  --color-foreground: #131313;
 
-  --color-card: #141a1f;
+  --color-card: #ffffff;
+  --color-card-raised: #131313;
 
-  --color-primary: #20b2a6;
-  --color-primary-foreground: #ffffff;
+  --color-primary: #ff5a1f;
+  --color-primary-foreground: #131313;
 
-  --color-secondary: #1f2830;
-  --color-secondary-foreground: #20b2a6;
+  --color-secondary: #4d5dfb;
+  --color-secondary-foreground: #ffffff;
 
-  --color-muted: #252e37;
-  --color-muted-foreground: #7a8491;
+  --color-muted: #e8e4d8;
+  --color-muted-foreground: #4a4a47;
 
-  --color-border: #242b32;
+  --color-border: #131313;
 
-  --radius: 0.75rem;
+  --radius: 0px;
 
-  --color-highlight: #f5a623;
-  --color-surface: #1a2329;
+  --color-highlight: #ffd23f;
+  --color-surface: #f2f0eb;
+
+  --font-sans: "Archivo", sans-serif;
+  --font-display: "Archivo Black", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
 @layer base {
@@ -35,87 +43,89 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-sans);
   }
 
-  .font-serif {
-    font-family: "Playfair Display", serif;
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    line-height: 0.98;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
   }
 }
 
 @layer components {
-  .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
-    backdrop-filter: blur(16px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  /* hard offset shadow, replaces the old glass/glow look */
+  .shadow-block {
+    box-shadow: 4px 4px 0 var(--color-foreground);
+    transition: transform 0.12s, box-shadow 0.12s;
   }
 
-  .glass-strong {
-    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
-    backdrop-filter: blur(24px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+  .shadow-block:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-foreground);
   }
 
-  .glow-text {
-    text-shadow: 0 0 30px
-      color-mix(in srgb, var(--color-primary) 50%, transparent);
+  .shadow-block-accent {
+    box-shadow: 4px 4px 0 var(--color-primary);
+    transition: transform 0.12s, box-shadow 0.12s;
   }
 
-  .glow-border {
-    box-shadow: 0 0 20px
-        color-mix(in srgb, var(--color-primary) 20%, transparent),
-      inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  .shadow-block-accent:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-primary);
+  }
+
+  .border-thick {
+    border: 2px solid var(--color-border);
+  }
+
+  .border-thicker {
+    border: 3px solid var(--color-border);
+  }
+
+  .nav-pill-link {
+    @apply px-4 py-2.5 text-xs uppercase tracking-wide font-mono text-muted-foreground border-r-2 border-foreground transition-colors;
+  }
+
+  .nav-pill-link:last-child {
+    border-right: none;
+  }
+
+  .nav-pill-link.active,
+  .nav-pill-link:hover {
+    @apply bg-foreground text-background;
+  }
+
+  .tag-chip {
+    @apply font-mono text-[10.5px] uppercase border-2 border-foreground px-2.5 py-1;
   }
 }
 
 @layer utilities {
- 
-  @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-        filter: blur(2px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
-      }
-  }
 
-  @keyframes slow-drift {
-    0%,
-    100% {
-      transform: translate(0, 0);
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    25% {
-      transform: translate(20px, -30px);
-    }
-    50% {
-      transform: translate(-15px, -20px);
-    }
-    75% {
-      transform: translate(30px, 10px);
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
   @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
 
   @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
   .animate-fade-in {
@@ -127,59 +137,14 @@
   }
 
   .animate-marquee {
-    animation: marquee 30s linear infinite;
+    animation: marquee 22s linear infinite;
   }
 
-  .animation-delay-100 {
-    animation-delay: 100ms;
-  }
-
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
-
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-
-  .animation-delay-800 {
-    animation-delay: 800ms;
-  }
-
-  @keyframes animated-border {
-    0% {
-      stroke-dashoffset: 400;
-    }
-    100% {
-      stroke-dashoffset: -550;
-    }
-  }
-
-  .group:hover .animated-border-path {
-    animation: animated-border 1.5s linear infinite;
-  }
-
-  .animated-border:hover {
-    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
-  }
-
-  .timeline-glow {
-    box-shadow: 0 0 40px
-        color-mix(in srgb, var(--color-primary) 35%, transparent),
-      0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
-  }
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
 }

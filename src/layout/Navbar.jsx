@@ -3,33 +3,33 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#certificates", label: "Certificates" },
-  { href: "#contact", label: "Contact" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
+  { href: "#about", label: "ABOUT" , active: true},
+  { href: "#certificates", label: "CERT" },
+  { href: "#contact", label: "CONTACT" },
+  { href: "#works", label: "WROKS" },
+  { href: "#experience", label: "EXP" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 right-0 left-0 bg-zinc-950 py-5">
+    <header className="sticky z-50 top-0 border-b-2 border-foreground bg-background right-0 left-0 py-5">
       <nav className="container mx-auto flex items-center justify-between px-6">
         <a
           href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          className="font-display text-lg uppercase tracking-tight font-bold"
         >
-          Sarath K P
+          SARATH <span className="text-primary">K.P</span>
         </a>
 
         <div className="hidden items-center gap-1 md:flex">
-          <div className="glass flex items-center gap-1 rounded-full px-2 py-1">
+          <div className="flex items-center border-2 border-foreground">
             {navLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm text-muted-foreground hover:bg-surface hover:text-foreground"
+                className={`border-r border-foreground px-4 py-2.5 text-xs uppercase tracking-wide font-mono last:border-0 hover:bg-foreground hover:text-background ${link.active ? "bg-foreground text-background" : "text-muted-foreground"}`}
               >
                 {link.label}
               </a>
@@ -38,8 +38,8 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <Button asChild>
-            <a href="#contact">Contact me</a>
+          <Button asChild className=" rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+            <a href="#contact">HIRE ME ↗</a>
           </Button>
         </div>
 
@@ -49,7 +49,7 @@ export const Navbar = () => {
           aria-expanded={isOpen}
           aria-controls="mobile-nav"
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="p-2 text-foreground md:hidden"
+          className="border-2 border-foreground p-2 text-foreground md:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? <X /> : <Menu />}
@@ -57,20 +57,22 @@ export const Navbar = () => {
       </nav>
 
       {isOpen && (
-       <div id="mobile-nav" className="glass-strong absolute top-full left-0 w-full animate-fade-in border-t border-border md:hidden">
+       <div id="mobile-nav" className="absolute top-full left-0 w-full animate-fade-in border-t-2 border-foreground bg-highlight md:hidden">
           <div className="container mx-auto flex flex-col items-center gap-4 px-6 py-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="py-2 text-lg text-muted-foreground hover:text-foreground"
+                className="py-3 font-display text-2xl uppercase text-foreground hover:text-background"
               >
                 {link.label}
               </a>
             ))}
 
              <Button asChild>
-            <a href="#contact">Contact me</a>
+            <a href="#contact" className="rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+              CONTACT ME
+            </a>
           </Button>
           </div>
         </div>
