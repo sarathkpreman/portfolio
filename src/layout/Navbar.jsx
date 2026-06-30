@@ -3,10 +3,10 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "#about", label: "ABOUT" , active: true},
+  { href: "#about", label: "ABOUT" },
   { href: "#certificates", label: "CERT" },
   { href: "#contact", label: "CONTACT" },
-  { href: "#works", label: "WROKS" },
+  { href: "#works", label: "WORKS" },
   { href: "#experience", label: "EXP" },
 ];
 
@@ -29,7 +29,7 @@ export const Navbar = () => {
               <a
                 key={index}
                 href={link.href}
-                className={`border-r border-foreground px-4 py-2.5 text-xs uppercase tracking-wide font-mono last:border-0 hover:bg-foreground hover:text-background ${link.active ? "bg-foreground text-background" : "text-muted-foreground"}`}
+                className={`border-r border-foreground px-4 py-2.5 text-xs uppercase tracking-wide font-mono last:border-0 hover:bg-foreground hover:text-background  text-muted-foreground }`}
               >
                 {link.label}
               </a>
@@ -64,13 +64,14 @@ export const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 className="py-3 font-display text-2xl uppercase text-foreground hover:text-background"
+                onClick={()=> setIsOpen(false)}
               >
                 {link.label}
               </a>
             ))}
 
              <Button asChild>
-            <a href="#contact" className="rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+            <a href="`#contact`" onClick={() => setIsOpen(false)} className="rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
               CONTACT ME
             </a>
           </Button>
