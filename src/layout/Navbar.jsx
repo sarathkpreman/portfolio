@@ -38,20 +38,26 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <Button>Contact me</Button>
+          <Button asChild>
+            <a href="#contact">Contact me</a>
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <div
+        <button
+          type="button"
+          aria-expanded={isOpen}
+          aria-controls="mobile-nav"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           className="p-2 text-foreground md:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? <X /> : <Menu />}
-        </div>
+        </button>
       </nav>
 
       {isOpen && (
-        <div className="glass-strong absolute top-full left-0 w-full animate-fade-in border-t border-border md:hidden">
+       <div id="mobile-nav" className="glass-strong absolute top-full left-0 w-full animate-fade-in border-t border-border md:hidden">
           <div className="container mx-auto flex flex-col items-center gap-4 px-6 py-6">
             {navLinks.map((link) => (
               <a
@@ -63,7 +69,9 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button>Contact me</Button>
+             <Button asChild>
+            <a href="#contact">Contact me</a>
+          </Button>
           </div>
         </div>
       )}

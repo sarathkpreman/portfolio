@@ -69,17 +69,18 @@
 }
 
 @layer utilities {
+ 
   @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-      filter: blur(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0);
-    }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(2px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
   }
 
   @keyframes slow-drift {
@@ -118,7 +119,7 @@
   }
 
   .animate-fade-in {
-    animation: fade-in 0.8s ease-out both;
+    animation: fade-in 0.4s ease-out both;
   }
 
   .animate-float {
@@ -181,25 +182,4 @@
         color-mix(in srgb, var(--color-primary) 35%, transparent),
       0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
-}
-
-
-@layer utilities {
-
-  @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-        filter: blur(2px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
-      }
-  }
-  .animate-fade-in {
-    animation: fade-in 0.4s ease-out both;
-  }
-
 }
