@@ -4,21 +4,20 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "#about", label: "ABOUT" },
-  { href: "#certificates", label: "CERT" },
-  { href: "#contact", label: "CONTACT" },
   { href: "#works", label: "WORKS" },
-  { href: "#experience", label: "EXP" },
+  { href: "#experience", label: "EXPERIENCE" },
+  { href: "#certificates", label: "CERTIFICATIONS" },
+  { href: "#contact", label: "CONTACT" },
 ];
-
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky z-50 top-0 border-b-2 border-foreground bg-background right-0 left-0 py-5">
+    <header className="sticky z-50 top-0 bg-background py-5">
       <nav className="container mx-auto flex items-center justify-between px-6">
         <a
           href="#"
-          className="font-display text-lg uppercase tracking-tight font-bold"
+          className="font-display text-2xl md:text-3xl uppercase tracking-tight font-bold"
         >
           SARATH <span className="text-primary">K.P</span>
         </a>
@@ -38,7 +37,9 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <Button asChild className=" rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+          <Button asChild className=" rounded-none border-2 border-foreground font-mono text-xs px-5 py-4 md:text-base font-extrabold
+          uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! 
+          hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
             <a href="#contact">HIRE ME ↗</a>
           </Button>
         </div>
@@ -57,7 +58,7 @@ export const Navbar = () => {
       </nav>
 
       {isOpen && (
-       <div id="mobile-nav" className="absolute top-full left-0 w-full animate-fade-in border-t-2 border-foreground bg-highlight md:hidden">
+       <div id="mobile-nav" className="absolute top-full left-0 w-full animate-fade-in  border-foreground bg-highlight md:hidden">
           <div className="container mx-auto flex flex-col items-center gap-4 px-6 py-6">
             {navLinks.map((link) => (
               <a
@@ -71,7 +72,7 @@ export const Navbar = () => {
             ))}
 
              <Button asChild>
-            <a href="`#contact`" onClick={() => setIsOpen(false)} className="rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+            <a href="`#contact`" onClick={() => setIsOpen(false)} className="font-extrabold rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
               CONTACT ME
             </a>
           </Button>
