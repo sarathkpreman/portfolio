@@ -8,29 +8,30 @@ import {
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden">
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-5 py-10 sm:px-6 sm:py-14 lg:py-16">
         {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+        <div className="grid grid-cols-1 gap-10 lg:gap-16 lg:grid-cols-2 lg:items-center">
           {/* LEFT SIDE: Content */}
           <div>
             {/* Open to Work */}
             <Button
               asChild
-              className="rounded-none border-2 border-foreground bg-indigo-600 font-mono text-xs text-background hover:bg-blue-700"
+              className="rounded-none border-2 border-foreground bg-indigo-600 font-mono text-xs text-background hover:bg-blue-700
+              px-4 text-[11px] h-10 sm:h-11 sm:px-5 sm:text-xs"
             >
               <a href="#contact">OPEN TO WORK</a>
             </Button>
 
             {/* Title + Description */}
             <div className="mt-8">
-              <h1 className="text-4xl font-bold leading-[0.9] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+              <h1 className="text-5xl font-bold leading-[0.9] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
                 I BUILD <br />
                 <span className="text-background [-webkit-text-stroke:1px_var(--color-foreground)] sm:[-webkit-text-stroke:1.5px_var(--color-foreground)] md:[-webkit-text-stroke:2px_var(--color-foreground)] lg:[-webkit-text-stroke:3px_var(--color-foreground)]">
                   SOFTWARE
                 </span>
               </h1>
 
-              <p className="mt-6 max-w-sm font-mono text-sm leading-7 text-muted-foreground">
+              <p className="mt-6 max-w-xs sm:max-w-sm text-[15px] leading-8 font-mono text-sm text-muted-foreground">
                 Full-stack developer based in Kerala, India — shipping
                 React/NestJS products while training, step by step, into AI/ML
                 engineering.
@@ -38,10 +39,11 @@ export const Hero = () => {
             </div>
 
             {/* Contact and Work Buttons */}
-            <div className="mt-10 flex items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
               <Button
                 asChild
-                className="h-15 rounded-none border-2 border-foreground bg-foreground px-10 font-mono text-s font-extrabold uppercase text-background shadow-[4px_4px_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_var(--color-foreground)]"
+                className="h-11 rounded-none border-2 border-foreground bg-foreground px-5 font-mono text-[11px] font-extrabold  sm:h-12 sm:px-7 sm:text-xs md:h-14 md:px-10
+                uppercase text-background shadow-[4px_4px_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_var(--color-foreground)]"
               >
                 <a
                   href="#projects"
@@ -53,7 +55,8 @@ export const Hero = () => {
 
               <Button
                 asChild
-                className="h-15 rounded-none border-2 border-foreground bg-transparent px-10 font-mono text-s font-extrabold uppercase text-foreground shadow-[4px_4px_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:bg-foreground/5 hover:shadow-[2px_2px_0_var(--color-foreground)]"
+                className="h-11 sm:h-12 sm:px-7 sm:text-xs md:h-14 md:px-10 rounded-none border-2 border-foreground bg-transparent px-5 font-mono text-[11px] 
+                font-extrabold uppercase text-foreground shadow-[4px_4px_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:bg-foreground/5 hover:shadow-[2px_2px_0_var(--color-foreground)]"
               >
                 <a
                   href="#contact"
@@ -68,9 +71,10 @@ export const Hero = () => {
           {/* RIGHT SIDE: Tech Stack */}
           <div className="relative flex items-center justify-center">
             {/* Tech Grid Backdrop */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-size-[32px_32px] opacity-10 mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] 
+            sm:bg-size:28px_28px lg:bg-size:32px_32px bg-size:24px_24px opacity-10 mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
 
-            <div className="relative w-full max-w-md font-mono">
+            <div className="relative mt-14 w-full max-w-sm lg:max-w-md font-mono">
               {/* Header */}
               <div className="mb-5 flex items-center justify-between border-b-2 border-foreground pb-3 text-[11px] text-muted-foreground">
                 <span>STACK.json</span>
@@ -115,17 +119,15 @@ export const Hero = () => {
                   return (
                     <div
                       key={row.label}
-                      className={`group border-2 p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_var(--color-foreground)] ${row.rotate} ${
+                      className={`group border-2 p-3 sm:p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_var(--color-foreground)] ${row.rotate} ${
                         row.accent
                           ? "border-indigo-600 bg-indigo-600/5 shadow-[6px_6px_0_var(--color-indigo-600,var(--color-indigo-600))]"
                           : "border-foreground bg-background shadow-[6px_6px_0_var(--color-foreground)]"
-                      }`}
-                      style={{ marginLeft: `${i * 20}px` }}
-                    >
+                      } ${i == 1 ? "lg:ml-5" : ""}  ${i == 2 ? "lg:ml-10" : ""}`} >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <Icon
-                            className={`h-4 w-4 ${
+                            className={`h-4 w-4 sm:h-5 sm:w-5 ${
                               row.accent
                                 ? "text-indigo-600"
                                 : "text-highlight"
@@ -133,7 +135,7 @@ export const Hero = () => {
                           />
 
                           <span
-                            className={`text-[10px] uppercase tracking-wide ${
+                            className={`text-[9px] sm:text-[10px] uppercase tracking-wide ${
                               row.accent
                                 ? "text-indigo-600"
                                 : "text-highlight"
@@ -148,7 +150,7 @@ export const Hero = () => {
                         </span>
                       </div>
 
-                      <div className="mt-2 text-sm text-foreground">
+                      <div className="mt-2 text-xs sm:text-sm leading-6 text-foreground">
                         {row.items}
                       </div>
                     </div>
