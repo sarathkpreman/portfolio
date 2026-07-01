@@ -1,6 +1,6 @@
 export const Certificates = () => {
     return (
-        <section>
+        <section id="certificates">
         
         </section>
     )

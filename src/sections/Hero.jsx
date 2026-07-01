@@ -1,47 +1,52 @@
 import { Button } from "@/components/ui/button";
-import {
-  BrainCircuit,
-  Code2,
-  Database,
-} from "lucide-react";
+import { BrainCircuit, Code2, Database } from "lucide-react";
+import { Social } from "./Social";
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
-      <div className="container mx-auto px-6 py-16">
-        {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-          {/* LEFT SIDE: Content */}
+    <section id="hero" className="relative overflow-hidden">
+      <div className="container mx-auto px-5 pt-10 pb-0 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-24">
+          {/* LEFT SIDE */}
           <div>
-            {/* Open to Work */}
             <Button
               asChild
-              className="rounded-none border-2 border-foreground bg-indigo-600 font-mono text-xs text-background hover:bg-blue-700"
+              className="h-10 rounded-none border-2 border-foreground
+                bg-indigo-600 px-4 font-mono text-[11px] text-background
+                hover:bg-blue-700 sm:h-11 sm:px-5 sm:text-xs"
             >
               <a href="#contact">OPEN TO WORK</a>
             </Button>
 
-            {/* Title + Description */}
             <div className="mt-8">
-              <h1 className="text-4xl font-bold leading-[0.9] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+              <h1 className="text-5xl font-bold leading-[0.9] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
                 I BUILD <br />
-                <span className="text-background [-webkit-text-stroke:1px_var(--color-foreground)] sm:[-webkit-text-stroke:1.5px_var(--color-foreground)] md:[-webkit-text-stroke:2px_var(--color-foreground)] lg:[-webkit-text-stroke:3px_var(--color-foreground)]">
+                <span
+                  className="text-background [-webkit-text-stroke:1px_var(--color-foreground)]
+                  sm:[-webkit-text-stroke:1.5px_var(--color-foreground)]
+                  md:[-webkit-text-stroke:2px_var(--color-foreground)]
+                  lg:[-webkit-text-stroke:3px_var(--color-foreground)]"
+                >
                   SOFTWARE
                 </span>
               </h1>
 
-              <p className="mt-6 max-w-sm font-mono text-sm leading-7 text-muted-foreground">
+              <p className="mt-6 max-w-md font-mono text-[15px] leading-8 text-muted-foreground lg:max-w-lg">
                 Full-stack developer based in Kerala, India — shipping
                 React/NestJS products while training, step by step, into AI/ML
                 engineering.
               </p>
             </div>
 
-            {/* Contact and Work Buttons */}
-            <div className="mt-10 flex items-center gap-4">
+            <div className="mt-5 flex flex-wrap items-center gap-3 sm:gap-4">
               <Button
                 asChild
-                className="h-15 rounded-none border-2 border-foreground bg-foreground px-10 font-mono text-s font-extrabold uppercase text-background shadow-[4px_4px_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_var(--color-foreground)]"
+                className="h-11 rounded-none border-2 border-foreground bg-foreground px-5
+                  font-mono text-[11px] font-extrabold uppercase text-background
+                  shadow-[4px_4px_0_var(--color-foreground)] transition-all
+                  hover:translate-x-0.5 hover:translate-y-0.5
+                  hover:shadow-[2px_2px_0_var(--color-foreground)]
+                  sm:h-12 sm:px-7 sm:text-xs md:h-14 md:px-10"
               >
                 <a
                   href="#projects"
@@ -53,7 +58,12 @@ export const Hero = () => {
 
               <Button
                 asChild
-                className="h-15 rounded-none border-2 border-foreground bg-transparent px-10 font-mono text-s font-extrabold uppercase text-foreground shadow-[4px_4px_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:bg-foreground/5 hover:shadow-[2px_2px_0_var(--color-foreground)]"
+                className="h-11 rounded-none border-2 border-foreground bg-transparent px-5
+                  font-mono text-[11px] font-extrabold uppercase text-foreground
+                  shadow-[4px_4px_0_var(--color-foreground)] transition-all
+                  hover:translate-x-0.5 hover:translate-y-0.5 hover:bg-foreground/5
+                  hover:shadow-[2px_2px_0_var(--color-foreground)]
+                  sm:h-12 sm:px-7 sm:text-xs md:h-14 md:px-10"
               >
                 <a
                   href="#contact"
@@ -63,16 +73,24 @@ export const Hero = () => {
                 </a>
               </Button>
             </div>
+
+            <Social />
           </div>
 
-          {/* RIGHT SIDE: Tech Stack */}
-          <div className="relative flex items-center justify-center">
-            {/* Tech Grid Backdrop */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:32px_32px] opacity-10 mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+          {/* RIGHT SIDE */}
+          <div className="flex flex-col items-center">
+            <div className="relative mt-6 w-full max-w-sm font-mono lg:mt-8 lg:max-w-lg">
+              {/* Grid Background */}
+              <div
+                className="absolute inset-0 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),
+                linear-gradient(to_bottom,#808080_1px,transparent_1px)]
+                bg-size-[24px_24px] opacity-10
+                mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]
+                sm:bg-size-[28px_28px] lg:bg-size-[32px_32px]"
+              />
 
-            <div className="relative w-full max-w-md font-mono">
               {/* Header */}
-              <div className="mb-5 flex items-center justify-between border-b-2 border-foreground pb-3 text-[11px] text-muted-foreground">
+              <div className="relative mb-5 flex items-center justify-between border-b-2 border-foreground pb-3 text-[12px] text-muted-foreground">
                 <span>STACK.json</span>
 
                 <span className="flex items-center gap-1.5">
@@ -85,8 +103,7 @@ export const Hero = () => {
                 </span>
               </div>
 
-              {/* Stack Cards */}
-              <div className="flex flex-col gap-4">
+              <div className="relative flex flex-col gap-4">
                 {[
                   {
                     label: "Frontend",
@@ -115,17 +132,18 @@ export const Hero = () => {
                   return (
                     <div
                       key={row.label}
-                      className={`group border-2 p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_var(--color-foreground)] ${row.rotate} ${
+                      className={`group border-2 p-3 transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_var(--color-foreground)] sm:p-4 ${row.rotate} ${
                         row.accent
-                          ? "border-indigo-600 bg-indigo-600/5 shadow-[6px_6px_0_var(--color-indigo-600,var(--color-indigo-600))]"
+                          ? "border-indigo-600 bg-indigo-600/5 shadow-[6px_6px_0_var(--color-indigo-600)]"
                           : "border-foreground bg-background shadow-[6px_6px_0_var(--color-foreground)]"
+                      } ${i === 1 ? "lg:ml-5" : ""} ${
+                        i === 2 ? "lg:ml-10" : ""
                       }`}
-                      style={{ marginLeft: `${i * 20}px` }}
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <Icon
-                            className={`h-4 w-4 ${
+                            className={`h-4 w-4 sm:h-5 sm:w-5 ${
                               row.accent
                                 ? "text-indigo-600"
                                 : "text-highlight"
@@ -133,7 +151,7 @@ export const Hero = () => {
                           />
 
                           <span
-                            className={`text-[10px] uppercase tracking-wide ${
+                            className={`text-[9px] uppercase tracking-wide sm:text-[10px] ${
                               row.accent
                                 ? "text-indigo-600"
                                 : "text-highlight"
@@ -143,12 +161,12 @@ export const Hero = () => {
                           </span>
                         </div>
 
-                        <span className="text-[10px] text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100">
+                        <span className="text-[10px] text-muted-foreground opacity-100 transition-opacity group-hover:opacity-100">
                           →
                         </span>
                       </div>
 
-                      <div className="mt-2 text-sm text-foreground">
+                      <div className="mt-2 text-xs leading-6 text-foreground sm:text-sm">
                         {row.items}
                       </div>
                     </div>
