@@ -8,17 +8,20 @@ import { Certificates } from "@/sections/Certificates";
 function App() {
 
   return (
-   <div className="min-h-screen overflow-x-hidden">
+  <div className="min-h-screen">
     <Navbar />
-    <main >
+    <main className="overflow-x-hidden">
       <Hero />
+      <div className="container mx-auto px-6">
+        <hr className="border-t border-foreground" />
+      </div>
       <About />
       <Projects />
       <Certificates />
       <Contact />
     </main>
-   </div>
-  )
+  </div>
+);
 }
 
 export default App
