@@ -4,17 +4,17 @@ import { Certificates } from "@/sections/Certificates";
 import { Contact } from "@/sections/Contact";
 import { Hero } from "@/sections/Hero";
 import { Projects } from "@/sections/Projects";
+import { SectionFooter } from "./sections/SectionFooter";
 
 function App() {
   return (
     <div className="min-h-screen">
       <Navbar />
-
       <main className="overflow-x-hidden">
         <Hero />
-
         <div className="container mx-auto px-5 sm:px-6">
           <hr className="mt-6 border-t border-foreground" />
+          <SectionFooter number={"01"} title={"about"} description={"Get to know me better"} nextSectionId="about" />
         </div>
 
         <About />
