@@ -9,7 +9,6 @@ export const SectionFooter = ({ number, title, description, nextSectionId }) => 
 
   return (
     <div className="w-full">
-      <hr className="border-t-2 border-black" />
 
       <div className="flex items-center justify-between py-4 md:py-6">
         <div className="flex items-center gap-3">
