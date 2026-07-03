@@ -28,7 +28,6 @@ export const Social = () => {
             w-10
             items-center
             justify-center
-            rounded-lg
             border-2
             border-foreground
             bg-background
@@ -55,7 +54,6 @@ export const Social = () => {
             w-10
             items-center
             justify-center
-            rounded-lg
             border-2
             border-foreground
             bg-background
@@ -80,7 +78,6 @@ export const Social = () => {
             w-10
             items-center
             justify-center
-            rounded-lg
             border-2
             border-foreground
             bg-background
