@@ -5,7 +5,7 @@ import { Social } from "./Social";
 export const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="container mx-auto px-5 pt-10 pb-0 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-16">
+      <div className="container mx-auto px-5 pt-10 pb-0 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-18">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-24">
           {/* LEFT SIDE */}
           <div>
@@ -19,7 +19,7 @@ export const Hero = () => {
             </Button>
 
             <div className="mt-8">
-              <h1 className="text-5xl font-bold leading-[0.9] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+              <h1 className="text-5xl font-bold leading-[0.9] tracking-[-0.04em] wrap-break-word sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl">
                 I BUILD <br />
                 <span
                   className="text-background [-webkit-text-stroke:1px_var(--color-foreground)]
@@ -79,7 +79,7 @@ export const Hero = () => {
 
           {/* RIGHT SIDE */}
           <div className="flex flex-col items-center">
-            <div className="relative mt-6 w-full max-w-sm font-mono lg:mt-8 lg:max-w-lg">
+            <div className="relative mt-6 w-full max-w-sm font-mono md:max-w-md lg:mt-8 lg:max-w-lg">
               {/* Grid Background */}
               <div
                 className="absolute inset-0 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),
@@ -132,7 +132,7 @@ export const Hero = () => {
                   return (
                     <div
                       key={row.label}
-                      className={`group border-2 p-3 transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_var(--color-foreground)] sm:p-4 ${row.rotate} ${
+                      className={`group border-2 p-3 transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_var(--color-foreground)] sm:p-4 md:p-5 ${row.rotate} ${
                         row.accent
                           ? "border-indigo-600 bg-indigo-600/5 shadow-[6px_6px_0_var(--color-indigo-600)]"
                           : "border-foreground bg-background shadow-[6px_6px_0_var(--color-foreground)]"
@@ -151,7 +151,7 @@ export const Hero = () => {
                           />
 
                           <span
-                            className={`text-[9px] uppercase tracking-wide sm:text-[10px] ${
+                            className={`text-[9px] uppercase tracking-wide sm:text-[10px] md:text-[11px]${
                               row.accent
                                 ? "text-indigo-600"
                                 : "text-highlight"
@@ -166,7 +166,7 @@ export const Hero = () => {
                         </span>
                       </div>
 
-                      <div className="mt-2 text-xs leading-6 text-foreground sm:text-sm">
+                      <div className="mt-2 text-xs leading-6 text-foreground sm:text-sm md:text-base">
                         {row.items}
                       </div>
                     </div>

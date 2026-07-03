@@ -17,12 +17,12 @@ export const Navbar = () => {
       <nav className="container mx-auto flex items-center justify-between px-6">
         <a
           href="#"
-          className="font-display text-2xl md:text-3xl uppercase tracking-tight font-bold"
+          className="font-display text-2xl lg:text-3xl uppercase tracking-tight font-bold"
         >
           SARATH <span className="text-primary">K.P</span>
         </a>
 
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           <div className="flex items-center border-2 border-foreground">
             {navLinks.map((link, index) => (
               <a
@@ -36,8 +36,8 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden md:block">
-          <Button asChild className=" rounded-none border-2 border-foreground font-mono text-xs px-5 py-4 md:text-base font-extrabold
+        <div className="hidden lg:block">
+          <Button asChild className=" rounded-none border-2 border-foreground font-mono text-xs px-5 py-4 lg:text-base font-extrabold
           uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! 
           hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
             <a href="#contact">HIRE ME ↗</a>
@@ -50,7 +50,7 @@ export const Navbar = () => {
           aria-expanded={isOpen}
           aria-controls="mobile-nav"
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="border-2 border-foreground p-2 text-foreground md:hidden"
+          className="border-2 border-foreground p-2 text-foreground lg:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? <X /> : <Menu />}
@@ -58,7 +58,7 @@ export const Navbar = () => {
       </nav>
 
       {isOpen && (
-       <div id="mobile-nav" className="absolute top-full left-0 w-full animate-fade-in  border-foreground bg-highlight md:hidden">
+       <div id="mobile-nav" className="absolute top-full left-0 w-full animate-fade-in  border-foreground bg-highlight lg:hidden">
           <div className="container mx-auto flex flex-col items-center gap-4 px-6 py-6">
             {navLinks.map((link) => (
               <a
@@ -72,7 +72,8 @@ export const Navbar = () => {
             ))}
 
              <Button asChild>
-            <a href="`#contact`" onClick={() => setIsOpen(false)} className="font-extrabold rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+            <a href="`#contact`" onClick={() => setIsOpen(false)} className="font-extrabold rounded-none border-2 border-foreground font-mono text-xs uppercase shadow-[4px_4px_0_var(--color-foreground)]! 
+            hover:shadow-[2px_2px_0_var(--color-foreground)]! hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
               CONTACT ME
             </a>
           </Button>
