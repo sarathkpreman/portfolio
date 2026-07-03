@@ -166,7 +166,7 @@ export const Hero = () => {
                         </span>
                       </div>
 
-                      <div className="mt-2 text-xs leading-6 text-foreground sm:text-sm md-text-base">
+                      <div className="mt-2 text-xs leading-6 text-foreground sm:text-sm md:text-base">
                         {row.items}
                       </div>
                     </div>
