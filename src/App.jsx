@@ -3,7 +3,7 @@ import { About } from "@/sections/About";
 import { Certificates } from "@/sections/Certificates";
 import { Contact } from "@/sections/Contact";
 import { Hero } from "@/sections/Hero";
-import { Projects } from "@/sections/Projects";
+import { Works } from "@/sections/Works";
 import { SectionFooter } from "./sections/SectionFooter";
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
     <div className="min-h-screen">
       <Navbar />
       <main className="overflow-x-hidden">
+
         <Hero />
         <div className="container mx-auto px-5 sm:px-6">
           <hr className="mt-6 border-t border-foreground" />
@@ -18,9 +19,13 @@ function App() {
         </div>
 
         <About />
-        <Projects />
+
+        <Works />
+
         <Certificates />
+
         <Contact />
+        
       </main>
     </div>
   );

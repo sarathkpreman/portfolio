@@ -49,7 +49,7 @@ export const Hero = () => {
                   sm:h-12 sm:px-7 sm:text-xs md:h-14 md:px-10"
               >
                 <a
-                  href="#projects"
+                  href="`#works`"
                   className="flex items-center justify-center"
                 >
                   VIEW WORK ↗
@@ -66,7 +66,7 @@ export const Hero = () => {
                   sm:h-12 sm:px-7 sm:text-xs md:h-14 md:px-10"
               >
                 <a
-                  href="#contact"
+                  href="`#contact`"
                   className="flex items-center justify-center"
                 >
                   CONTACT
