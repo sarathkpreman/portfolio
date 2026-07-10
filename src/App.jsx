@@ -19,6 +19,10 @@ function App() {
         </div>
 
         <About />
+        <div className="container mx-auto px-5 sm:px-6">
+          <hr className="mt-6 border-t border-foreground" />
+          <SectionFooter number={"02"} title={"works"} description={"Built & Shipped Projects"} nextSectionId="works" />
+        </div>
 
         <Works />
 
