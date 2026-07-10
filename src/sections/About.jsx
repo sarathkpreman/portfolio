@@ -40,6 +40,14 @@ export const About = () => {
 
           <div
             className="cursor-pointer"
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e)=> {
+              if(e.key == "Enter" || e.key == " ") {
+                e.preventDefault();
+                setShowOutsideCard((prev) => !prev)
+              }
+            }}  
             onClick={() => setShowOutsideCard((prev) => !prev)}
           >
             {showOusideCard ? <OutsideCard /> : <JourenyCard />}
@@ -47,6 +55,14 @@ export const About = () => {
 
           <div
             className="cursor-pointer"
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e)=> {
+              if(e.key == "Enter" || e.key == " ") {
+                e.preventDefault();
+                setShowCurrentLearningCard((prev) => !prev)
+              }
+            }}
             onClick={() => setShowCurrentLearningCard((prev) => !prev)}
           >
             {showCurrentLearningCard ? <CurrentLearningCard /> : <TechStackCard />}
