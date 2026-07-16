@@ -1,7 +1,9 @@
 export const Works = () => {
+  
+
     return (
         <section id="works" className="relative overflow-hidden">
-           <diV className="container mx-auto px-4 pb-0 pt-8 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-18">
+           <div className="container mx-auto px-4 pb-0 pt-8 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-18">
             {/* Header */}
             <header className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-12">
                 {/* Left */}
@@ -19,7 +21,7 @@ export const Works = () => {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 
             </div>
-           </diV>
+           </div>
         </section>
     )
 }
