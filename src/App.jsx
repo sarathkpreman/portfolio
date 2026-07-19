@@ -25,6 +25,10 @@ function App() {
         </div>
 
         <Works />
+         <div className="container mx-auto px-5 sm:px-6">
+          <hr className="mt-6 border-t border-foreground" />
+          <SectionFooter number={"03"} title={"experience"} description={"Learning & Professional experience"} nextSectionId="works" />
+        </div>
 
         <Certificates />
 
