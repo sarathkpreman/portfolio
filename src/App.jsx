@@ -1,6 +1,7 @@
 import { Navbar } from "@/layout/Navbar";
 import { About } from "@/sections/About";
 import { Certificates } from "@/sections/Certificates";
+import { Experience } from "@/sections/Experience";
 import { Contact } from "@/sections/Contact";
 import { Hero } from "@/sections/Hero";
 import { Works } from "@/sections/Works";
@@ -25,6 +26,16 @@ function App() {
         </div>
 
         <Works />
+        <div className="container mx-auto px-5 sm:px-6">
+          <hr className="mt-6 border-t border-foreground" />
+          <SectionFooter number={"03"} title={"experience"} description={"Professional experience"} nextSectionId="experience" />
+        </div>
+
+        <Experience />
+         <div className="container mx-auto px-5 sm:px-6">
+          <hr className="mt-6 border-t border-foreground" />
+          <SectionFooter number={"04"} title={"certificates"} description={"Certifications i earned"} nextSectionId="certificates" />
+        </div>
 
         <Certificates />
 
