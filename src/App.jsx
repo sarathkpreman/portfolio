@@ -6,6 +6,7 @@ import { Contact } from "@/sections/Contact";
 import { Hero } from "@/sections/Hero";
 import { Works } from "@/sections/Works";
 import { SectionFooter } from "./sections/SectionFooter";
+import { Footer } from "./sections/Footer"
 
 function App() {
   return (
@@ -40,6 +41,10 @@ function App() {
         <Certificates />
 
         <Contact />
+         <div className="container mx-auto px-5 sm:px-6">
+          <hr className="mt-6 border-t border-foreground" />
+          <Footer nextSectionId="hero"/>
+        </div>
         
       </main>
     </div>
