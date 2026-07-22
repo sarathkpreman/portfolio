@@ -162,7 +162,7 @@ export const Experience = () => {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
 
             <div className="flex items-center gap-4">
-              <div className="grid size-12 place-items-center rounded-full bg-[#FF5A1F] text-black text-xl font-black">
+              <div aria-hidden="true" className="grid size-12 place-items-center rounded-full bg-[#FF5A1F] text-black text-xl font-black">
                 ↗
               </div>
 
@@ -178,17 +178,12 @@ export const Experience = () => {
               </div>
             </div>
 
-            <a
-              href="#work"
-              className="
-                ml-auto inline-flex items-center gap-3 border-2 border-black
-                bg-[#FF5A1F] px-6 py-3 text-sm font-black uppercase tracking-[0.16em]
-                transition hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#111]
-              "
-            >
-              SEE FULL STORY
-              <span aria-hidden>↗</span>
-            </a>
+           <span
+              aria-disabled="true"
+              className="ml-auto inline-flex cursor-not-allowed items-center gap-3 border-2 border-black
+                          bg-[`#FF5A1F`] px-6 py-3 text-sm font-black uppercase tracking-[0.16em] opacity-60">
+              FULL STORY — COMING SOON
+            </span>
           </div>
         </div>
       </div>
