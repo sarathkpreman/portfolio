@@ -34,12 +34,12 @@ export const Experience = () => {
         {/* Section heading */}
         <header className="mb-12">
           <div className="max-w-3xl space-y-4">
-            <div className="flex items-center gap-3">
-              <span className="border border-black px-3 py-1 text-xs font-black tracking-[0.18em]">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+              <span className="w-fit border border-black px-3 py-1 text-xs font-black tracking-[0.18em]">
                 03 / EXPERIENCE
               </span>
 
-              <span className="font-mono text-xs text-black/60">
+              <span className="font-mono text-xs text-black/60 hidden sm:inline">
                 Self-directed engineering journey
               </span>
             </div>
@@ -70,7 +70,7 @@ export const Experience = () => {
               <article
                 key={card.id}
                 className="
-                  relative border bg-[#F6F1E8] p-5
+                  relative border bg-[#F6F1E8] p-5 md:p-4 lg:p-5
                   transition-all duration-300 ease-out will-change-transform
                   hover:-translate-y-1 hover:bg-[#EFE7D6]
                   hover:shadow-[8px_8px_0_#111]
@@ -81,13 +81,13 @@ export const Experience = () => {
 
                   {/* Left panel */}
                   <div
-                    className={`flex items-center justify-center p-5 ${accent.panel}`}
+                      className={`flex h-28 items-center justify-center md:h-24 lg:h-auto p-4 ${accent.panel}`}
                   >
                     <div className="
                       grid place-items-center
                     ">
                       <Icon
-                        size={90}
+                        size={72}
                         strokeWidth={2.2}
                         color={accent.icon}
                       />
@@ -106,8 +106,8 @@ export const Experience = () => {
                       </p>
 
                       <div className="ml-auto">
-                        <div className="border border-black bg-[#F6F1E8] px-4 py-2">
-                          <p className="text-sm font-black tracking-[0.08em]">
+                        <div className="w-fit border border-black bg-[#F6F1E8] px-4 py-2 sm:px-3 sm:py-1.5">
+                          <p className="text-sm sm:text-xs font-black tracking-[0.08em] whitespace-nowrap">
                             {card.period}
                           </p>
                         </div>
@@ -162,7 +162,7 @@ export const Experience = () => {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
 
             <div className="flex items-center gap-4">
-              <div aria-hidden="true" className="grid size-12 place-items-center rounded-full bg-[#FF5A1F] text-black text-xl font-black">
+              <div aria-hidden="true" className="hidden lg:grid size-12 place-items-center rounded-full bg-[#FF5A1F] text-black text-xl font-black">
                 ↗
               </div>
 
@@ -180,8 +180,8 @@ export const Experience = () => {
 
            <span
               aria-disabled="true"
-              className="ml-auto inline-flex cursor-not-allowed items-center gap-3 border-2 border-black
-                          bg-[#FF5A1F] px-6 py-3 text-sm font-black uppercase tracking-[0.16em] opacity-60">
+              className="w-full sm:w-fit lg:ml-auto inline-flex cursor-not-allowed items-center gap-2 border-2 border-black
+                          bg-[#FF5A1F] px-5 py-3 md:px-4 md:py-2.5 lg:px-6 lg:py-3 text-xs md:text-sm font-black uppercase tracking-[0.16em] opacity-60">
               FULL STORY — COMING SOON
             </span>
           </div>
