@@ -181,7 +181,7 @@ export const Experience = () => {
            <span
               aria-disabled="true"
               className="ml-auto inline-flex cursor-not-allowed items-center gap-3 border-2 border-black
-                          bg-[`#FF5A1F`] px-6 py-3 text-sm font-black uppercase tracking-[0.16em] opacity-60">
+                          bg-[#FF5A1F] px-6 py-3 text-sm font-black uppercase tracking-[0.16em] opacity-60">
               FULL STORY — COMING SOON
             </span>
           </div>
