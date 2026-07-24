@@ -1,6 +1,6 @@
 export const Contact = () => {
     return (
-        <section>
+        <section id="contact">
            
         </section>
     )
