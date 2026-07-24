@@ -10,7 +10,8 @@ export const projects = [
     id: 1,
     number: "01",
     title: "ClearPath",
-    description: "AI-powered job application tracker with adaptive status and analytics.",
+    description:
+      "An AI-powered job application tracker that helps organize applications, monitor progress, and gain insights through an interactive analytics dashboard.",
     category: "Web Apps",
     tags: ["Next.js", "NestJS", "AI"],
     icon: PiMonitorArrowUpFill,
@@ -22,7 +23,8 @@ export const projects = [
     id: 2,
     number: "02",
     title: "Vyayam",
-    description: "AI-assisted fitness platform with adaptive workout logic and queues.",
+    description:
+      "An AI-assisted fitness platform that generates personalized workout plans, tracks progress, and handles background tasks using scalable job queues.",
     category: "AI/ML",
     tags: ["NestJS", "Queues"],
     icon: PiBarbellFill,
@@ -34,7 +36,8 @@ export const projects = [
     id: 3,
     number: "03",
     title: "CoinPulse",
-    description: "Crypto tracker built on CoinGecko API with live charting.",
+    description:
+      "A cryptocurrency dashboard delivering real-time market data, interactive price charts, and portfolio insights powered by the CoinGecko API.",
     category: "Web Apps",
     tags: ["React", "Recharts"],
     icon: PiCurrencyBtcFill,
@@ -46,7 +49,8 @@ export const projects = [
     id: 4,
     number: "04",
     title: "Pattu",
-    description: "Personal music player with a Spotify-style mobile mini-player.",
+    description:
+      "A modern music player featuring playlist management, playback controls, progress tracking, and a responsive Spotify-inspired mini player.",
     category: "Web Apps",
     tags: ["React", "CSS"],
     icon: PiMusicNotesFill,
@@ -58,7 +62,8 @@ export const projects = [
     id: 5,
     number: "05",
     title: "Smart Todo",
-    description: "React todo app with controlled inputs and state-lifting patterns.",
+    description:
+      "A task management application built with React, showcasing clean state management, reusable components, and an intuitive productivity-focused interface.",
     category: "Web Apps",
     tags: ["React", "State"],
     icon: PiClipboardTextFill,
