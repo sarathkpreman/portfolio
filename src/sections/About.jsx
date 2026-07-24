@@ -13,7 +13,7 @@ export const About = () => {
   const [showCurrentLearningCard, setShowCurrentLearningCard] = useState(false);
 
   return (
-    <section id="about" className="relative overflow-hidden">
+    <section id="about" className="relative overflow-hidden mt-5">
       <div className="container mx-auto px-4 pb-0 pt-8 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-18">
 
         {/* Section heading */}

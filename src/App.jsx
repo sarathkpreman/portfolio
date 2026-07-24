@@ -13,7 +13,7 @@ function App() {
       <main className="overflow-x-hidden">
 
         <Hero />
-        <div className="container mx-auto px-5 sm:px-6">
+        <div className="container mx-auto px-5 sm:px-6 hidden lg:block">
           <hr className="mt-6 border-t border-foreground" />
           <SectionFooter number={"01"} title={"about"} description={"Get to know me better"} nextSectionId="about" />
         </div>
