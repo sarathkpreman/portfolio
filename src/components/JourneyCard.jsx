@@ -9,7 +9,10 @@ export const JourenyCard = () => {
   ];
 
   return (
-    <div className="w-full h-120 overflow-hidden border p-5 font-mono flex flex-col bg-zinc-900">
+    <div className="w-full h-120 overflow-hidden border p-5 font-mono flex flex-col bg-zinc-900 md:p-4 lg:p-5
+                  transition-all duration-300 ease-out will-change-transform
+                  hover:-translate-y-1
+                  hover:shadow-[8px_8px_0_#111] shadow-primary">
       <div className="flex items-center gap-2 mb-5 shrink-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,10 +28,10 @@ export const JourenyCard = () => {
             d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5"
           />
         </svg>
-        <p className="text-lg uppercase tracking-wide text-white font-bold">My Journey</p>
+        <p className="text-xl uppercase tracking-wide text-white font-display">My Journey</p>
       </div>
 
-      <div className="flex flex-col overflow-y-auto">
+      <div className="flex flex-col overflow-y-auto ">
         {milestones.map((m, i) => (
           <div key={m.year}>
             <div className="flex gap-3 items-start">

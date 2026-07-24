@@ -32,16 +32,19 @@ export const TechStackCard = () => {
   ];
 
   return (
-    <div className="w-full h-120 overflow-hidden border p-5">
+    <div className="w-full h-120 overflow-hidden border bg-[#F6F1E8] p-5 md:p-4 lg:p-5
+                  transition-all duration-300 ease-out will-change-transform
+                  hover:-translate-y-1 hover:bg-[#EFE7D6]
+                  hover:shadow-[8px_8px_0_#111]">
       <div className="flex gap-2">
-        <IoLayersSharp size="20px"/>
-        <p className="text-sm font-mono uppercase tracking-wide text-foreground font-bold mb-4">Tech stack</p>
+        <IoLayersSharp size={28}/>
+        <p className="text-xl uppercase tracking-wide text-foreground font-display mb-6">Tech stack</p>
       </div>
       <div className="grid grid-cols-4 gap-3">
         {stack.map((Icon, i) => (
           <div
             key={i}
-            className="border text-foreground aspect-square flex items-center justify-center"
+            className="border text-foreground aspect-square flex items-center justify-center bg-primary"
           >
             <Icon className="text-4xl text-foreground "/>
           </div>

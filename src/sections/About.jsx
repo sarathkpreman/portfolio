@@ -16,21 +16,30 @@ export const About = () => {
     <section id="about" className="relative overflow-hidden">
       <div className="container mx-auto px-4 pb-0 pt-8 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-16 lg:pb-18">
 
-        {/* Header */}
-        <header className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-12">
-          <div className="space-y-2 sm:space-y-3">
-            <p className="font-display text-primary text-sm sm:text-base">01 /</p>
-            <h2 className="text-4xl font-black leading-none sm:text-5xl lg:text-6xl">
-              ABOUT.
-              <span className="ml-1 font-mono text-2xl font-normal lowercase sm:text-3xl lg:text-4xl">
-                json
+        {/* Section heading */}
+        <header className="mb-12">
+          <div className="max-w-3xl space-y-4">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+              <span className="w-fit border border-black px-3 py-1 text-xs font-black tracking-[0.18em]">
+                01 / ABOUT
               </span>
-            </h2>
-            <p className="font-mono text-xs text-muted-foreground sm:text-sm">
-              Get to know me better.
-            </p>
-          </div>
-        </header>
+
+              <span className="hidden font-mono text-xs text-black/60 sm:inline">
+                Engineer • Builder • Learner
+              </span>
+            </div>
+
+          <h2 className="text-4xl font-black leading-none sm:text-5xl lg:text-6xl">
+            BUILDING WITH PURPOSE
+          </h2>
+
+        <p className="font-mono text-sm leading-7 text-black/70">
+            Computer Science graduate building modern web applications while
+            growing in backend engineering, AI, and machine learning.
+          </p>
+        </div>
+      </header>
+
 
         {/* Content */}
         <div className="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2 sm:mt-8 lg:grid-cols-3">
