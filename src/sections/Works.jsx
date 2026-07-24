@@ -105,7 +105,7 @@ export const Works = () => {
             >
               {/* Number + Icon */}
               <div className="mb-6 flex items-start justify-between">
-                <p className="font-display text-primary">
+                <p className="font-display text-primary text-3xl">
                   {project.number}
                 </p>
 
