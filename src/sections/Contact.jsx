@@ -34,7 +34,7 @@ const INFO_ITEMS = [
 export const Contact = () => {
   return (
     <section id="contact" className="relative overflow-hidden">
-      <div className="container mx-auto px-4 pt-8 pb-0 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-12 lg:pb-18">
+      <div className="container mx-auto px-4 pt-8 pb-0 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-12 lg:pb-18 mt-16 sm:mt-20 lg:mt-24">
         {/* Header Section */}
        <header className="mb-12 flex flex-col gap-8 lg:flex-row lg:justify-between ">
           <div className="max-w-3xl space-y-4">

@@ -45,7 +45,7 @@ function App() {
         </div>
 
         <Contact />
-         <div className="container mx-auto px-5 sm:px-6 ">
+         <div className="container mx-auto px-5 sm:px-6">
           <hr className="mt-6 border-t border-foreground hidden lg:block" />
           <Footer nextSectionId="hero"/>
         </div>
