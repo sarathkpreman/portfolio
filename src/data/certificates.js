@@ -1,3 +1,11 @@
+import {
+  PiGraduationCapFill,
+  PiBrainFill,
+  PiCloudFill,
+  PiCodeFill,
+  PiAtomFill,
+} from "react-icons/pi";
+
 export const certificates = [
   {
     id: 1,
@@ -5,12 +13,10 @@ export const certificates = [
     issuer: "Stanford Online",
     platform: "Coursera",
     year: "2026",
-    icon: "graduation-cap",
+    icon: PiGraduationCapFill,
     description:
-      "Supervised and unsupervised learning, regression, classification, neural networks, and practical ML workflows.",
-    credentialId: "ML-2026-DEMO-8472",
+      "Supervised and unsupervised learning, regression, classification, neural networks, and practical machine learning workflows.",
     verifyUrl: "#",
-    accent: "purple",
     featured: true,
   },
 
@@ -20,40 +26,34 @@ export const certificates = [
     issuer: "DeepVision Institute",
     platform: "Coursera",
     year: "2026",
-    icon: "layers",
+    icon: PiBrainFill,
     description:
-      "Neural networks, convolutional architectures, sequence models, attention mechanisms, and optimization techniques.",
-    credentialId: "DL-2026-DEMO-2194",
+      "Neural networks, CNNs, transformers, attention mechanisms, and optimization techniques for modern AI systems.",
     verifyUrl: "#",
-    accent: "purple",
   },
 
   {
     id: 3,
-    title: "AWS Cloud Practitioner Essentials",
+    title: "AWS Cloud Practitioner",
     issuer: "Amazon Web Services",
     platform: "AWS Training",
     year: "2025",
-    icon: "cloud",
+    icon: PiCloudFill,
     description:
-      "Cloud concepts, IAM, networking basics, pricing models, security fundamentals, and shared responsibility model.",
-    credentialId: "AWS-CP-DEMO-5521",
+      "Cloud fundamentals, IAM, networking, storage, pricing models, and security best practices on AWS.",
     verifyUrl: "#",
-    accent: "blue",
   },
 
   {
     id: 4,
-    title: "JavaScript Algorithms and Data Structures",
+    title: "JavaScript Algorithms & Data Structures",
     issuer: "freeCodeCamp",
     platform: "freeCodeCamp",
     year: "2025",
-    icon: "code",
+    icon: PiCodeFill,
     description:
-      "Problem solving, recursion, dynamic programming, data structures, and algorithmic thinking using JavaScript.",
-    credentialId: "FCC-JS-DEMO-9087",
+      "Algorithm design, data structures, recursion, dynamic programming, and problem-solving with JavaScript.",
     verifyUrl: "#",
-    accent: "teal",
   },
 
   {
@@ -62,39 +62,9 @@ export const certificates = [
     issuer: "Maximilian Schwarzmüller",
     platform: "Udemy",
     year: "2025",
-    icon: "atom",
+    icon: PiAtomFill,
     description:
-      "Hooks, context API, routing, state management, performance optimization, and scalable React architecture.",
-    credentialId: "REACT-DEMO-3318",
+      "React Hooks, routing, Context API, performance optimization, and scalable component architecture.",
     verifyUrl: "#",
-    accent: "blue",
-  },
-
-  {
-    id: 6,
-    title: "Git & GitHub Professional Workflow",
-    issuer: "CodeCraft Academy",
-    platform: "Udemy",
-    year: "2024",
-    icon: "git-branch",
-    description:
-      "Version control, branching strategies, pull requests, rebasing, conflict resolution, and collaborative workflows.",
-    credentialId: "GIT-DEMO-7743",
-    verifyUrl: "#",
-    accent: "teal",
   },
 ];
-
-export const certificatesSummary = {
-  label: "CONTINUOUS LEARNING",
-  value: "ALWAYS GROWING",
-};
-
-export const certificatesFooter = {
-  title: "Learning is a continuous journey.",
-  description: "More certifications and learning milestones coming soon.",
-  cta: {
-    label: "VIEW ALL CERTIFICATES",
-    href: "#",
-  },
-};
