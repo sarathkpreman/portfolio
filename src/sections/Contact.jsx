@@ -36,25 +36,33 @@ export const Contact = () => {
     <section id="contact" className="relative overflow-hidden">
       <div className="container mx-auto px-4 pt-8 pb-0 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-12 lg:pb-18">
         {/* Header Section */}
-        <header className="mb-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-          {/* Left Side */}
-          <div className="space-y-3">
-            <p className="font-display text-sm text-primary sm:text-base">
-              02 /
-            </p>
+       <header className="mb-12 flex flex-col gap-8 lg:flex-row lg:justify-between ">
+          <div className="max-w-3xl space-y-4">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+              <span className="w-fit border px-3 py-1 text-xs font-black tracking-[0.18em]">
+                05 / CONTACT
+              </span>
+
+              <span className="hidden font-mono text-xs text-black/60 sm:inline">
+                  Collaboration • Opportunities • Let's Connect
+              </span>
+            </div>
+
             <h2 className="text-4xl font-black leading-none sm:text-5xl lg:text-6xl">
-              CONTACT.
+              LET'S BUILD TOGETHER
             </h2>
-            <p className="font-mono text-xs text-muted-foreground sm:text-sm">
-              Let’s build something together
+
+            <p className="font-mono text-sm leading-7 text-black/70">
+             Open to software engineering, full-stack, and AI opportunities. Feel free
+              to reach out for collaborations, projects, or just to say hello.
             </p>
           </div>
 
           {/* Right Side - Quick Links */}
-          <div className="mt-15 flex flex-col gap-6 text-sm sm:flex-row sm:flex-wrap sm:items-start lg:flex-nowrap">
+          <div className="flex flex-col gap-5 text-sm sm:flex-row sm:flex-wrap sm:items-start lg:flex-nowrap">
             {/* Email */}
-            <div className="mt-3 flex min-w-55 items-start gap-3">
-              <MdEmail className="mt-0.5 h-7 w-7" />
+            <div className="flex items-start gap-3">
+              <MdEmail className="mt-0.5 h-7 w-7 text-primary" />
               <div>
                 <h3 className="font-semibold">Email</h3>
                 <p className="text-muted-foreground">sarathkpreman@gmail.com</p>
@@ -64,8 +72,8 @@ export const Contact = () => {
             <div className="hidden h-14 w-px bg-border lg:block" />
 
             {/* GitHub */}
-            <div className="mt-3 flex min-w-55 items-start gap-3">
-              <FaGithub className="mt-0.5 h-7 w-7" />
+            <div className="flex items-start gap-3">
+              <FaGithub className="mt-0.5 h-7 w-7 text-black" />
               <div>
                 <h3 className="font-semibold">GitHub</h3>
                 <p className="text-muted-foreground">
@@ -77,8 +85,8 @@ export const Contact = () => {
             <div className="hidden h-14 w-px bg-border lg:block" />
 
             {/* LinkedIn */}
-            <div className="mt-3 flex min-w-55 items-start gap-3">
-              <FaLinkedin className="mt-0.5 h-7 w-7" />
+            <div className="flex items-start gap-3">
+              <FaLinkedin className="mt-0.5 h-7 w-7 text-indigo-700" />
               <div>
                 <h3 className="font-semibold">LinkedIn</h3>
                 <p className="text-muted-foreground">
@@ -92,7 +100,7 @@ export const Contact = () => {
         {/* Content Section */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[500px_minmax(0,1000px)] lg:justify-center">
           {/* Left Side Panel */}
-          <div className="relative overflow-hidden border border-white/10 bg-[#0b0b0f] p-4 text-white shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+          <div className="relative overflow-hidden border border-white/10 bg-[#0b0b0f] p-4 text-white ">
             {/* Orange glow background effect */}
             <div className="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-orange-500/20 blur-3xl" />
 
@@ -125,7 +133,8 @@ export const Contact = () => {
                       key={item.label}
                       className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/3 p-3 transition-all duration-300 hover:border-orange-400/40 hover:bg-white/6"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-orange-400/30 bg-orange-500/10 text-orange-400 shadow-[0_0_24px_rgba(249,115,22,0.16)] transition-transform duration-300 group-hover:scale-105">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-orange-400/30 bg-orange-500/10 text-orange-400 
+                      shadow-[0_0_24px_rgba(249,115,22,0.16)] transition-transform duration-300 group-hover:scale-105">
                         <Icon className="h-5 w-5" />
                       </div>
 
@@ -165,7 +174,7 @@ export const Contact = () => {
           </div>
 
           {/* Right Side Panel - Contact Form */}
-          <div className="border bg-card p-5 shadow-sm">
+          <div className="border p-5 shadow-sm">
             <div className="mb-5">
               <h3 className="text-2xl font-bold uppercase">Send a message</h3>
               <p className="mt-1 text-muted-foreground">
@@ -178,42 +187,39 @@ export const Contact = () => {
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="h-11 rounded-xl border bg-background px-4 outline-none transition focus:ring-2 focus:ring-primary/20"
+                  className="h-11 border bg-background px-4 outline-none transition"
                 />
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="h-11 rounded-xl border bg-background px-4 outline-none transition focus:ring-2 focus:ring-primary/20"
+                  className="h-11 border bg-background px-4 outline-none transition"
                 />
               </div>
 
               <input
                 type="text"
                 placeholder="Subject"
-                className="h-11 w-full rounded-xl border bg-background px-4 outline-none transition focus:ring-2 focus:ring-primary/20"
+                className="h-11 w-full border bg-background px-4 outline-none transition"
               />
 
               <textarea
                 rows={5}
                 placeholder="Tell me about your project or opportunity..."
-                className="w-full rounded-xl border bg-background px-4 py-3 outline-none transition focus:ring-2 focus:ring-primary/20"
+                className="w-full border bg-background px-4 py-3 outline-none transition"
               />
 
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div className="hidden lg:block">
+              <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div className="">
                   <Button
                     asChild
-                    className="rounded-none border-2 border-foreground font-mono text-xs font-extrabold uppercase 
-                    shadow-[4px_4px_0_var(--color-foreground)]! transition-all hover:translate-x-0.5 hover:translate-y-0.5 
-                    hover:shadow-[2px_2px_0_var(--color-foreground)]! px-7 py-7 lg:text-base"
-                  >
-                    <a href="#contact">send message ↗</a>
+                    className="w-full lg:w-auto rounded-none border-2 border-foreground px-5 py-4 text-xs font-mono font-extrabold uppercase
+                            shadow-[4px_4px_0_var(--color-foreground)]!
+                            transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_var(--color-foreground)]! 
+                            sm:px-6 sm:py-5 sm:text-sm lg:px-7 lg:py-7 lg:text-base">
+                  <a href="#contact">Send Message ↗</a>
                   </Button>
                 </div>
 
-                <p className="text-sm text-muted-foreground">
-                  Your information is safe with me.
-                </p>
               </div>
             </form>
           </div>
