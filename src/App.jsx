@@ -29,7 +29,7 @@ function App() {
         <Works />
          <div className="container mx-auto px-5 sm:px-6 hidden lg:block">
           <hr className="mt-6 border-t border-foreground" />
-          <SectionFooter number={"03"} title={"experience"} description={"Learning & Professional experience"} nextSectionId="works" />
+          <SectionFooter number={"03"} title={"experience"} description={"Learning & Professional experience"} nextSectionId="experience" />
         </div>
 
         <Experience />

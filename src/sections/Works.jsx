@@ -15,7 +15,7 @@ export const Works = () => {
   ];
 
   return (
-    <section id="works" className="relative overflow-hidden mt-5">
+    <section id="works" className="relative overflow-hidden">
       <div className="container mx-auto px-4 pt-8 pb-0 sm:px-6 sm:pt-14 sm:pb-4 lg:pt-12 lg:pb-18">
 
         {/* Header */}

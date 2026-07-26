@@ -33,7 +33,7 @@ export const Experience = () => {
 
         {/* Section heading */}
         <header className="mb-12">
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-3xl space-y-6">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
               <span className="w-fit border border-black px-3 py-1 text-xs font-black tracking-[0.18em]">
                 03 / EXPERIENCE
